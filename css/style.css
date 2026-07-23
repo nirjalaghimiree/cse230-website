@@ -114,6 +114,12 @@ h2 {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .skills-card {
     background: #f9f9f9;
     padding: 1.5rem;
@@ -127,7 +133,7 @@ h2 {
     border-bottom: 2px solid #facc15;
     display: inline-block;
     padding-bottom: 0.3rem;
-    color: #1e3a8a;
+    color: #cc9c49;
     margin-bottom: 0.5rem;
     font-weight: bold;
 }
@@ -153,7 +159,7 @@ h2 {
 }
 
 .projects-container a {
-    color: #1e3a8a;
+    color: #cc9c49;
     font-weight: bold;
     text-decoration: none;
 }
@@ -169,7 +175,7 @@ h2 {
 
 .contact-container label {
     font-weight: bold;
-    color: #1e3a8a;
+    color: #cc9c49;
     margin-top: 1rem;
 }
 
@@ -184,7 +190,7 @@ h2 {
 
 .contact-container button {
     margin-top: 1rem;
-    background-color: #1e3a8a;
+    background-color: #cc9c49;
     color: #fff;
     padding: 0.8rem 1.5rem;
     border: none;
@@ -197,7 +203,7 @@ h2 {
 }
 
 footer {
-    background-color: #1e3a8a;
+    background-color: #cc9c49;
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -210,7 +216,6 @@ footer {
 }
 
 @media(max-width: 768px) {
-
     .header-container {
         flex-direction: column;
         align-items: flex-start;
@@ -221,7 +226,7 @@ footer {
         flex-direction: column;
         gap: 1rem;
         width: 100%;
-        background: #1e3a8a;
+        background: #cc9c49;
         padding: 1rem;
         border-radius: 8px;
     }
@@ -269,4 +274,70 @@ footer {
         align-items: center;
         text-align: center;
     }
+}
+
+
+/* slider css */
+.slider {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 350px;
+    max-height: 5000px;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.slider-btn.prev {
+    left: 10px
+}
+
+.slider-btn.next {
+    right: 10px;
+}
+
+.slider-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    user-select: none;
+}
+
+.dot.active {
+    background-color: #333;
 }
